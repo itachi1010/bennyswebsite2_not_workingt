@@ -1,0 +1,35 @@
+{% extends 'main/header.html' %}
+
+  {% block content %}
+
+
+		{% load crispy_forms_tags %}
+
+
+		<!--Contact form-->
+		<div class="card" style="width: 18rem;">
+            <div class="card-body">
+
+			<h1 class="card-title">About Us</h1>
+			<h4 class="card-title">Contact me directly for help</h4>
+			<p class="card-text">
+				This is a test, thanks for stopping by
+			</p>
+			<form method="post">
+	        {% csrf_token %}
+	            {{form|crispy}}
+
+			<div style="text-align:right "><p ><b><a href ="/">Home</a></b></p></div>
+			</form>
+                	</div>
+	    </div>
+
+<div class="card" style="width: 18rem;">
+	<img src="https://d2gdtie5ivbdow.cloudfront.net/work.jpg" class="card-img-top" alt="work">
+	<div class="card-body">
+		<h5 class="card-title">Services</h5>
+		<p class="card-text">This card can be used to display one of the multiple services your website or company provides. Add multiple cards in their own columns to create a dynamic set of cards.</p>
+		<a href="" class="btn btn-primary">Learn more</a>
+	</div>
+</div>
+  {% endblock %}
