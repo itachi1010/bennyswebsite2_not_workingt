@@ -16,17 +16,9 @@ class Book(models.Model):
         return self.book_title
 
 
-from django.db import models
-
-# Create your models here.
-from django.db import models
-
-
-# Create your models here.
-
 class Product(models.Model):
     productname = models.CharField(max_length=200)
-    price = models.DecimalField(max_digits=5, decimal_places=2)
+    price = models.DecimalField(max_digits=5, decimal_places=2, null=True)
     description = models.TextField()
     image = models.CharField(max_length=5000, null=True, blank=True)
 
